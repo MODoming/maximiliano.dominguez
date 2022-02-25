@@ -166,3 +166,10 @@ footer img{
         margin: 2em 1em;
     }
 }
+@media screen and (max-width:490px){
+    .foto-perfil{
+        float:initial;
+        align-content: center;
+        margin: 0px 30px 30px 30px;
+    }
+}
