@@ -70,6 +70,9 @@ main, .banner div{
     font-size: 1em;
     text-align: center;
 }
+.title{
+    font-size: 1.3em;
+}
 main p{
     margin-bottom: 0.75em;
     line-height: 1.4em;
@@ -155,5 +158,11 @@ footer img{
         display: block;
         padding: 0.5em 0em;
         flex-wrap: wrap;
+    }
+    footer div{   
+        width: 90%;
+    }
+    .contenido-baner, .estudios, .habilidad, .proyecto, .contacto{
+        margin: 2em 1em;
     }
 }
