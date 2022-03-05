@@ -11,16 +11,17 @@ main{
 }
 
 /* sector para el header */
-header{   
+header{ 
     width: 100%; 
     align-items: center;
     top: 0px;        
     position: fixed;
     background-color: rgb(247, 212, 159);  
 }
-.cabecera{  
+.cabecera{     
     width: 75%;
     margin: 0px auto;
+    height: 1.5em;
     display: flex;    
     padding: 1em;
     justify-content: space-between;
@@ -33,7 +34,7 @@ header{
 strong{
     font-weight: bold;
 }
-.nevegar{
+.navegar{
     display: none;
 }
 .menu li:hover{
@@ -72,14 +73,14 @@ main, .banner div{
 }
 .title{
     font-size: 1.3em;
+    padding: 1em 0em;
 }
 main p{
     margin-bottom: 0.75em;
     line-height: 1.4em;
 }
 .seccion-datos{
-    padding: 1em 0em;
-    margin: 1em 0em;
+    margin: 3em 0em;
     text-align: left;
     border: 1px solid rgba(119, 118, 118, 0.70);
     background-color: rgba(105, 105, 105, 0.60);
@@ -88,10 +89,40 @@ main p{
 }
 .contenido-baner, .estudios, .habilidad, .proyecto, .contacto{
     margin: 2em 3em;
+    padding: 1em 0em;
 }
 .descripcion{
     margin-left: 1em;
 }
+
+/* sector formacion*/
+.formacion img{
+    height: 3em;
+    float: left;
+    margin-right: 1em;
+}
+.descripcion{
+    margin-bottom: 2em;
+}
+
+/* Habilidades*/
+.habilidades-img{
+    width: 100%;
+    margin: 1em auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;    
+    align-items: center;
+}
+#habilidades img{
+    height: 10em;
+    margin: 1em;
+    float: left;
+    background-color: white;
+    border-radius: 1em;
+    align-items: center;
+}
+
 
 /* sector para el footer*/
 footer{   
@@ -139,11 +170,11 @@ footer img{
     .menu ul li:after{
         content:" ↩"
     }
-    .nevegar{
+    .navegar{
         display: block;
         cursor: pointer;
     }
-    .nevegar:hover{     
+    .navegar:hover{     
         border-radius: 5px;
         background-color: burlywood;
         text-decoration: underline;
@@ -166,10 +197,18 @@ footer img{
         margin: 2em 1em;
     }
 }
-@media screen and (max-width:490px){
+@media screen and (max-width:480px){
     .foto-perfil{
         float:initial;
         align-content: center;
         margin: 0px 30px 30px 30px;
+    }
+    #habilidades img{
+        margin: 1em auto;
+    }
+    .navegar{
+        width: 100%;
+        text-align: right;
+        margin-top: 5px;
     }
 }

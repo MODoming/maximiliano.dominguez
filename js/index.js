@@ -1,5 +1,5 @@
 jQuery('document').ready(function($){
-    var menuBtn = $('.nevegar'),
+    var menuBtn = $('.navegar'),
         menu = $('.menu ul'),
         menuDeplegado = $('.menu');
 
