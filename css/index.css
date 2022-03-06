@@ -43,7 +43,8 @@ strong{
 }
 nav ul li{    
     display: inline;
-    padding: 0em 0.5em;    
+    padding: 0em 0.5em;
+    background-color: rgb(247, 212, 159);      
 }
 nav a{
     text-decoration: none;    
@@ -105,7 +106,7 @@ main p{
     margin-bottom: 2em;
 }
 
-/* Habilidades*/
+/* Habilidades y Proyectos*/
 .habilidades-img{
     width: 100%;
     margin: 1em auto;
@@ -114,7 +115,7 @@ main p{
     flex-wrap: wrap;    
     align-items: center;
 }
-#habilidades img{
+#habilidades img, #proyectos img{
     height: 10em;
     margin: 1em;
     float: left;
@@ -123,6 +124,55 @@ main p{
     align-items: center;
 }
 
+/* Sector Proyectos*/
+.proyectos-img{
+    width: 100%;
+    margin: 1em auto;
+    display: flex;    
+    flex-wrap: wrap;      
+    align-items: center;
+}
+.proyectos-img div{
+    vertical-align: middle;
+    margin: auto 1em;
+    display:inline-flex;
+}
+.proyectos-img p{
+    height: 10em;
+    margin: 1em;
+    float: left;
+    align-items: center;
+}
+.proyectos-img a{
+    font-style: italic; 
+    color: white;
+    font-size: 1em;
+}
+
+/* Sector Contacto*/
+input, textarea{
+    margin: 0.5em auto;
+    padding: 0em 1em;
+    width: 75%;
+    height: 2em;
+    display: flex;
+}
+form label{
+    margin-left: 1em;
+}
+#comentario{
+    padding-top: 1em;
+    min-height: 70px;
+}
+.boton-enviar{
+    margin: 1em auto;
+    width: 10em;
+}
+.boton-enviar button{
+    width: 100%;    
+    height: 2em;
+    border-radius: 0.5em;
+}
 
 /* sector para el footer*/
 footer{   
@@ -195,8 +245,15 @@ footer img{
     }
     .contenido-baner, .estudios, .habilidad, .proyecto, .contacto{
         margin: 2em 1em;
+    }    
+}
+
+@media screen and (max-width:839px){    
+    .proyectos-img div{
+        flex-wrap: wrap;
     }
 }
+
 @media screen and (max-width:480px){
     .foto-perfil{
         float:initial;
@@ -211,4 +268,12 @@ footer img{
         text-align: right;
         margin-top: 5px;
     }
+    .cabecera{
+        flex-wrap: nowrap;
+    }
+    .proyectos-img p{ 
+        height: 25em;
+    }
 }
+
+

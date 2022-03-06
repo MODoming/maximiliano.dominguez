@@ -28,8 +28,6 @@
                     </ul>
                 </nav>
             </div>
-            
-            </div>
         </header>        
 
         <main>
@@ -107,14 +105,48 @@
             <section class="seccion-datos" id="proyectos">
                 <div class="proyecto">
                     <p class="title"><strong>Proyectos en ejecución</strong><br></p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat doloribus recusandae qui aliquam incidunt inventore? Accusamus laboriosam repellat aspernatur fugiat, ipsum ipsa ullam sunt debitis ex modi? Explicabo, delectus ad. </p></div>
-            </section>
+                    <div class="proyectos-img">
+                        <span>Juego del ahorcado <a target="_blank" href="https://modoming.github.io/ahorcadisimo/"> ir al juego</a></span>                        
+                        <div>
+                            <img src="img/juego-ahorcado.png" alt="Challenge Juego del ahorcado">
+                            <p>Proyecto en su versión 2.3. Etapa intermedia de un juego realizado con JavaScript. Juego del ahorcado, el cual permite adivinar la palabra simplemente presionando las teclas de la computadora. Todavía se encuentra en progreso y en adaptación, agregando mejoras constantemente. </p>
+                        </div>
+                        <span>Encriptador de textos <a target="_blank" href="https://modoming.github.io/challenge_encriptador/"> Ir al encriotador</a></span>
+                        
+                        <div>
+                            <img src="img/Encriptador.png" alt="Encriptador de textos">
+                            <p>Proyecto en su versión 1.0. Etapa inicial de un encriptador de textos que, mediante lógica con JavaScript, los textos los puede encriptar o des-encriptar según uno lo desee y podrá ser leído por cualquier persona que utilice esta página.</p>
+                        </div>
+                        
+                    </div>
+                </section>
 
             <section class="seccion-datos" id="contacto">
                 <div class="contacto">
                     <p class="title"><strong>Contacto</strong><br></p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat doloribus recusandae qui aliquam incidunt inventore? Accusamus laboriosam repellat aspernatur fugiat, ipsum ipsa ullam sunt debitis ex modi? Explicabo, delectus ad. </p></div>
-            </section>
+                    <form class="contenedor">
+                        <label for="Nombre">Nombre: </label>
+                        <input placeholder="Nombre" type="text" name="Nombre" id="nombre" required>
+                        <br>
+                        <label for="Apellido">Apellido: </label>
+                        <input placeholder="Aleppido" type="text" name="Apellido" id="apellido" required>
+                        <br>
+                        <label for="e-mail">Correo electrónico: </label>
+                        <input placeholder="nombre@dominio.com" type="email" name="e-mail" id="e-mail" required>
+                        <br>
+                        <label for="Telefono">Teléfono: </label>
+                        <input placeholder="Teléfono" type="tel" name="Telefono" id="telefono" required>
+                        <br>
+                        <label for="Comentario">Comentario: </label>
+                        <textarea name="Comentario" id="comentario" cols="30" rows="10" placeholder="Deje aquí su comentario..." required></textarea>
+                        <br>
+                        <div class="boton-enviar">
+                            <button id="enviar">Enviar</button>
+                        </div>
+
+                    </form>
+
+                </section>
         </main>   
 
         <footer>
