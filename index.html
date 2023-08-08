@@ -38,9 +38,9 @@
                     </div>
                     <img class="foto-perfil" src="img/Maxi_paraguas.jpg" alt="Foto de perfil" >
                     <div class="sobe-mi">
-                        <p>Mi nombre es <strong>Maximiliano Dominguez</strong>, de 37 años de edad y nacionalidad Argentina.</p>
+                        <p>Mi nombre es <strong>Maximiliano Dominguez</strong>, de <span id="edad"></span> años de edad y nacionalidad Argentina.</p>
                         <p>Desde el año 2014 que trabajo como profesor de escuela técnica (nivel secundario), en la especialidad Construcciones. Como Maestro Mayor de Obras, ademas tengo el titulo docente, que me permite enseñar en todas las materias de la especialidad Construcciones.</p>
-                        <p>Durante mi vida siempre estuve cerca del área de la computación y la informática en general. Por esto hace un año que estoy cursando la carrera de Técnico superior en Análisis de Sistemas (Instituto ESBA) con un certificado intermedio de Analista Programador. Estoy capacitándome en lenguajes tales como Java, .Net, HTML, Css, JS y Python.</p>
+                        <p>Durante mi vida siempre estuve cerca del área de la computación y la informática en general. Por esto comencé la carrera de Técnico superior en Análisis de Sistemas (Instituto ESBA) con un certificado intermedio de Analista Programador, pero la misma la tengo en suspenso para poder cambiar el enfoque de los conocimientos que quiero adquirir. Por dicho motivo me encuentro estudiando la carrera de desarrollo de softwar con la que voy a obtener un titulo de <strong>Técnico Superior en Desarrollo de Software</strong>. Estoy capacitándome en lenguajes tales como Java, .Net, HTML, Css, JS y Python.</p>
                         <p>Poseo iniciativa propia y soy autodidacta al momento de capacitarme y adaptarme a nuevas tecnologías.</p>
                         <p>Por mi desempeño como docente tengo buen manejo de grupos (cursos de alrededor de 35 alumnos), trabajo en equipo y rápida adaptación a cambios.</p>
                     </div>
@@ -124,7 +124,7 @@
             <section class="seccion-datos" id="contacto">
                 <div class="contacto">
                     <p class="title"><strong>Contacto</strong><br></p>
-                    <form class="contenedor">
+                    <form class="contenedor" id="formulario" action="enviar_formulario.php" method="post">
                         <label for="Nombre">Nombre: </label>
                         <input placeholder="Nombre" type="text" name="Nombre" id="nombre" required>
                         <br>
@@ -143,10 +143,21 @@
                         <div class="boton-enviar">
                             <button id="enviar">Enviar</button>
                         </div>
-
                     </form>
-
-                </section>
+                </div>
+                <div class="contacto">
+                    <p class="title"><strong>Chatea con mi bot</Area></strong><br></p>
+                    <form class="chatbot">
+                        <label for="Chatea conmigo">Chatea conmigo: </label> 
+                        <input placeholder="Ingresa tu pregunta aqui:" type="text" name="chatbot" id="chatbot">
+                        <div class="boton-enviar">
+                            <button id="preguntar">Enviar</button>
+                        </div>
+                        <br>
+                        <textarea name="Chatarea" id="comentario" cols="30" rows="30" placeholder="Cat con mi BOT..." readonly></textarea>
+                    </form>
+                </div>
+            </section>
         </main>   
 
         <footer>
@@ -162,6 +173,14 @@
         
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="js/index.js"></script>
+        <script>
+            var fechaActual = new Date(); // Obtener la fecha actual            
+            var fechaNacimiento = new Date(1984, 11, 20); // Fecha de nacimiento (formato: año, mes - 1, día)
+            var diferenciaMilisegundos = fechaActual - fechaNacimiento; // Calcular la diferencia en milisegundos entre la fecha actual y la de nacimiento
+            var anos = Math.floor(diferenciaMilisegundos / (365.25 * 24 * 60 * 60 * 1000)); // Convertir la diferencia de milisegundos a años
+            var edadSpan = document.getElementById("edad"); // Actualizar el contenido del elemento span con la edad calculada
+            edadSpan.textContent = anos;
+        </script>
     </body>
 
 </html>
