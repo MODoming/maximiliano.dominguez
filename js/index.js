@@ -44,7 +44,7 @@ jQuery('document').ready(function($){
         });
 
         // Enviar los datos del formulario a Google Apps Script
-        var scriptURL = 'https://script.google.com/d/1lsGSuMz3nLh5h5k6ypDK6DxgQ9jpe2CUGzuYjL1tpXIpyaP9XiWdDWku/edit?usp=drive_link';
+        var scriptURL = 'https://script.google.com/macros/s/AKfycby-It0AyVUO6J8xlT0lmN9W9jxvWZY5mE2P4UWPYBDrUzVg_9qPou6lkmcx98GTdPz9pw/exec';
         fetch(scriptURL, {
             method: 'POST',
             body: formData,
