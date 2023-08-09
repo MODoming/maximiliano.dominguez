@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $telefono = $_POST["telefono"];
     $comentario = $_POST["comentario"];
 
-    $destinatario = "maximiliano.dominguez@bue.edu.ar";
+    $destinatario = "aireyluz.md@gmail.com";
     $asunto = "Consulta de Contacto";
     $mensaje = "Nombre: $nombre $apellido\n";
     $mensaje .= "Correo electrónico: $email\n";

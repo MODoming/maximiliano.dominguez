@@ -16,9 +16,8 @@ jQuery('document').ready(function($){
         } else {
             menu.addClass('show');
         };
-    });        
-});
-document.addEventListener("DOMContentLoaded", function () {
+    });
+
     var formulario = document.getElementById("formulario");
 
     formulario.addEventListener("submit", function (event) {
@@ -43,5 +42,15 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(function (error) {
             console.error("Error:", error);
         });
+
+        // Enviar los datos del formulario a Google Apps Script
+        var scriptURL = 'https://script.google.com/d/1lsGSuMz3nLh5h5k6ypDK6DxgQ9jpe2CUGzuYjL1tpXIpyaP9XiWdDWku/edit?usp=drive_link';
+        fetch(scriptURL, {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => console.log('Formulario enviado a Google Apps Script:', response))
+        .catch(error => console.error('Error al enviar el formulario a Google Apps Script:', error));
     });
 });
+
