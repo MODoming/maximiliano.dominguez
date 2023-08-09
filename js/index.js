@@ -26,7 +26,7 @@ jQuery('document').ready(function($){
         var formData = new FormData(formulario);
 
         fetch(formulario.action, {
-            method: "POST",
+            method: "post",
             body: formData
         })
         .then(function (response) {
