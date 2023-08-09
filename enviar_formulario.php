@@ -1,5 +1,5 @@
 <?php
-$name = $_POST["Nombre" + "Apellido"];
+$name = $_POST["Nombre"] . " " . $_POST["Apellido"];
 $mail = $_POST["e-mail"];
 $phone = $_POST["Telefono"];
 $message = $_POST["Comentario"];
@@ -21,5 +21,4 @@ $asunto = "Consulta de Contacto";
 mail($destinatario, $asunto, $message, $header);
 
 header('Location:index.html');
-
 ?>
