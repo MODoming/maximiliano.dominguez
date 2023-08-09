@@ -1,24 +1,25 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $nombre = $_POST["nombre"];
-    $apellido = $_POST["apellido"];
-    $email = $_POST["e-mail"];
-    $telefono = $_POST["telefono"];
-    $comentario = $_POST["comentario"];
+$name = $_POST["Nombre" + "Apellido"];
+$mail = $_POST["e-mail"];
+$phone = $_POST["Telefono"];
+$message = $_POST["Comentario"];
 
-    $destinatario = "aireyluz.md@gmail.com";
-    $asunto = "Consulta de Contacto";
-    $mensaje = "Nombre: $nombre $apellido\n";
-    $mensaje .= "Correo electrónico: $email\n";
-    $mensaje .= "Teléfono: $telefono\n";
-    $mensaje .= "Comentario:\n$comentario";
+$header = 'From: ' . $mail . " \r\n";
+$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
+$header .= "Mine-Version: 1.0 \r\n";
+$header .= "Content-Type: text/plain";
 
-    $cabeceras = "From: $email";
+$message = "Consulta de Contacto enviado por: " . $name . " \r\n";
+$message .= "Su correo es: " . $mail . " \r\n";
+$message .= "Telefono de contacto: " . $phone . " \r\n";
+$message .= "Mensaje: " . $_POST["Comentario"] . " \r\n";
+$message .= "Enviado el: " . date('d/m/y', time());
 
-    if (mail($destinatario, $asunto, $mensaje, $cabeceras)) {
-        echo "Mensaje enviado correctamente.";
-    } else {
-        echo "Error al enviar el mensaje.";
-    }
-}
+$destinatario = "maxi.dmgz@gmail.com";
+$asunto = "Consulta de Contacto";
+
+mail($destinatario, $asunto, $message, $header);
+
+header('Location:index.html');
+
 ?>
