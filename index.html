@@ -143,7 +143,7 @@
                 <div class="contacto">
                     <p class="title"><strong>Contacto</strong><br></p>
                     
-                    <form id="miFormulario">
+                    <form id="formulario" action="https://script.google.com/macros/s/AKfycbz2WzmxbZzvSwxo-x-iYyORa_O5vOWzBEfV7fIbpl55D0xwBU9aNSN9EcUw5E1sdvOr/exec" method="post">
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" required>
             
@@ -153,27 +153,9 @@
                         <label for="mensaje">Mensaje:</label>
                         <textarea id="mensaje" name="mensaje" required></textarea>
             
-                        <input type="button" value="Enviar" onclick="enviarFormulario()">
+                        <input type="submit" value="Enviar">
                     </form>
                 </div>
-            
-                <script>
-                    function enviarFormulario() {
-                        var formulario = document.getElementById('miFormulario');
-                        var datos = new FormData(formulario);
-            
-                        fetch('https://script.google.com/macros/s/AKfycbzOdf8yZ35mZzik4hp7yeJNmEAFdq-dmwJ88JB2-gnRy3BM8dDNV3goSFnWJiPm55rJ/exec', {
-                            method: 'POST',
-                            body: datos
-                        })
-                        .then(response => response.text())
-                        .then(data => {
-                            console.log(data);
-                            // Puedes realizar acciones adicionales después de enviar el formulario, si es necesario.
-                        })
-                        .catch(error => console.error('Error:', error));
-                    }
-                </script>
             </section>
         </main>   
 
