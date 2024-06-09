@@ -1,11 +1,26 @@
-Bienvenidos y Bienvenidas.
+```markdown
+# Portfolio Web - Curriculum Vitae
 
-Este es mi carta de presentación, o bien mi Curriculum Vitae.
+## Descripción
 
-Está confeccionado con HTML, CSS y JavaScript, aplicando los conocimientos adquiridos en los cursos y capacitaciones brindadas por Alura Latam y Oracle Next Education.
+Este repositorio contiene el código fuente de mi portfolio web personal, desarrollado utilizando HTML5 y JavaScript. Este sitio web está diseñado para servir como mi currículum vitae en línea, disponible para cualquier persona que desee conocer más sobre mis habilidades, experiencia y proyectos.
 
-El objetivo del mismo es dar a conocer mis trabajos, mis experiencias, los gustos que tengo y las capacitaciones que tengo realizadas.
+## Características
 
-Los invito a conocerme y los dejo que evalúen mi trabajo estando a la espera de críticas constructivas para poder ir mejorando a lo largo de mi carrera.
+- **HTML5**: Para la estructura y el contenido del sitio.
+- **JavaScript**: Para la interactividad y funcionalidad dinámica.
+- **Responsive Design**: Adaptable a diferentes tamaños de pantalla y dispositivos.
+- **Secciones**:
+  - Sobre mí
+  - Estudios
+  - Habilidades
+  - Proyectos
+  - Contacto
 
-En este mometo el portfolio se encuentra en construccion por lo que todavia tiene datos incompletos o falta contenido.
+## Link disponible
+
+https://modoming.github.io/maximiliano.dominguez/
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Si tienes alguna idea para mejorar el sitio, por favor abre un issue o envía un pull request.
